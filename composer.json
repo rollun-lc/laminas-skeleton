@@ -48,7 +48,7 @@
     "mezzio/mezzio-helpers": "^5.8",
     "mezzio/mezzio-session": "1.7.x-dev",
     "rollun-com/rollun-callback": "dev-laminas",
-    "rollun-com/rollun-datastore": "dev-laminas",
+    "rollun-com/rollun-datastore": "dev-laminas-with-xiag",
     "rollun-com/rollun-logger": "dev-laminas",
     "symfony/dotenv": "6.1.x-dev"
   }
