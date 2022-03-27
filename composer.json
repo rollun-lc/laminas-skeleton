@@ -46,11 +46,12 @@
     "mezzio/mezzio": "^3.9",
     "mezzio/mezzio-fastroute": "^3.4",
     "mezzio/mezzio-helpers": "^5.8",
-    "mezzio/mezzio-session": "1.7.x-dev",
-    "rollun-com/rollun-callback": "dev-laminas",
-    "rollun-com/rollun-datastore": "dev-laminas-with-xiag",
-    "rollun-com/rollun-logger": "dev-laminas",
-    "symfony/dotenv": "6.1.x-dev"
+    "mezzio/mezzio-session": "^1.6.0",
+    "rollun-com/rollun-callback": "^7.0.0",
+    "rollun-com/rollun-datastore": "^8.0.0",
+    "rollun-com/rollun-logger": "^7.0.1",
+    "symfony/dotenv": "^6.0.3",
+    "guzzle/guzzle": "dev-php-8.0 as v3.9.0"
   }
   ,
   "require-dev": {
@@ -109,6 +110,10 @@
     {
       "type": "github",
       "url": "git@github.com:rollun-com/rollun-datastore.git"
+    },
+    {
+      "type": "github",
+      "url": "git@github.com:orlyk-rollun/guzzle3.git"
     }
   ],
   "minimum-stability": "dev"
