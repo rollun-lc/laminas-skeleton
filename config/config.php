@@ -25,6 +25,11 @@ if(file_exists('.env')) {
 $appEnv = getenv('APP_ENV');
 
 $aggregator = new ConfigAggregator([
+    \Laminas\Filter\ConfigProvider::class,
+    \rollun\utils\Metrics\ConfigProvider::class,
+    \rollun\utils\FailedProcesses\ConfigProvider::class,
+    \Laminas\Cache\Storage\Adapter\Filesystem\ConfigProvider::class,
+    \Laminas\Diactoros\ConfigProvider::class,
     \Mezzio\Session\ConfigProvider::class,
     \rollun\repository\ConfigProvider::class,
     \Mezzio\ConfigProvider::class,
