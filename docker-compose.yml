@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  service-suppliers-nginx:
+  nginx:
     build:
       context: docker/nginx
       dockerfile: Dockerfile
