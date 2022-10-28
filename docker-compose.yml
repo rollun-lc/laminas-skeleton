@@ -18,6 +18,7 @@ services:
       - ./:/var/www/app
     environment:
       APP_ENV: dev
+      PHP_IDE_CONFIG: serverName=php-fpm
 
   php-openapi-generator:
     image: maxrollundev/php-openapi-generator:8.0
