@@ -23,6 +23,3 @@ services:
     image: maxrollundev/php-openapi-generator:8.0
     volumes:
       - ./:/var/www/app
-
-volumes:
-  mysql:
