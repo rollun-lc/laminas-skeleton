@@ -54,3 +54,19 @@ docker-compose exec php-fpm composer update
 ## Логгер
 
 Логгер в dev режимі [налаштованний](../config/autoload/logger.global.dev.php), щоб записувати логи в data/logs/all.log
+
+## Налаштування PhpStorm
+
+1. Додайте інтерпретатор
+   ![Cli-interpreter 1](img/getting-started/php-storm/cli-interpreter-1.png)
+   ![Cli-interpreter 2](img/getting-started/php-storm/cli-interpreter-2.png)
+   ![Cli-interpreter 3](img/getting-started/php-storm/cli-interpreter-3.png)
+   ![Cli-interpreter 4](img/getting-started/php-storm/cli-interpreter-4.png)
+
+2. Налаштуйте composer
+   ![Composer settings](img/getting-started/php-storm/composer-settings.png)
+
+3. Налаштуйте Xdebug
+    ![Debug settings](img/getting-started/php-storm/debug-settings.png?raw=true)
+    ![Debug settings](img/getting-started/php-storm/debug-settings-server-name.png)
+    ![Xdebug server settings](img/getting-started/php-storm/servers-settings.png)
