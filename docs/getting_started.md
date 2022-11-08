@@ -70,3 +70,12 @@ docker-compose exec php-fpm composer update
     ![Debug settings](img/getting-started/php-storm/debug-settings.png?raw=true)
     ![Debug settings](img/getting-started/php-storm/debug-settings-server-name.png)
     ![Xdebug server settings](img/getting-started/php-storm/servers-settings.png)
+
+## Локальні конфіги
+
+Локальні конфіги - це ті які не потрабляють в гіт репозиторій, а отже будуть доступні лише на вашій машині.
+Для того, щоб створити локальний конфіг достатньо щоб назва файлу конфігу відповідала шаблону `*.local.php`
+
+Також окрім локальних конфігів можна створювати конфіги, що будуть залежати від оточення в якому запущенно сервер, тобто
+від змінної оточення APP_ENV (dev, prod, test). Для цього достатньо щоб назва файлу конфігу відповідала шаблону
+`{{,*.}global.{$appEnv}.php`, наприклад 'db.global.dev.php' - буде підключенно тільки якщо змінна APP_ENV = dev
