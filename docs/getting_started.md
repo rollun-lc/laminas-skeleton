@@ -70,6 +70,7 @@ docker-compose exec php-fpm composer update
     ![Debug settings](img/getting-started/php-storm/debug-settings.png?raw=true)
     ![Debug settings](img/getting-started/php-storm/debug-settings-server-name.png)
     ![Xdebug server settings](img/getting-started/php-storm/servers-settings.png)
+    ![Docker settings](img/getting-started/php-storm/docker-settings.png)
 
 ## Локальні конфіги
 
