@@ -45,3 +45,20 @@
    "rollun-com/rollun-openapi": "^10.0.0"
 }
 ```
+
+# Перехід на laminas з zend
+1. Замінити усі zend бібліотеки на їх laminas аналоги. Аналог знайти достатньо просто: треба знайти zend бібліотеку на 
+github і там в README пишеться куди переїхала ця бібліотека.
+2. Оновити версії rollun бібліотек, актуальні версії можна знайти вище
+3. За потреби оновити усі інші стороні бібліотеки
+4. В composer.json, після розділу scripts дописати 
+```
+"repositories": [
+  {
+    "type": "github",
+    "url": "git@github.com:orlyk-rollun/guzzle3.git"
+  }
+],
+"minimum-stability": "dev"
+```
+5. Додайте в require секцію composer.json рядок `"guzzle/guzzle": "dev-php-8.0 as v3.9.0"` 
