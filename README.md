@@ -62,3 +62,44 @@ github і там в README пишеться куди переїхала ця б�
 "minimum-stability": "dev"
 ```
 5. Додайте в require секцію composer.json рядок `"guzzle/guzzle": "dev-php-8.0 as v3.9.0"` 
+6. Для того щоб запрацювали сесії додайте пакет `mezzio/mezzio-session-ext`
+7. Конфігурація whoops в `development.local.php.dist`:
+```php
+<?php
+/**
+ * Development-only configuration.
+ *
+ * Put settings you want enabled when under development mode in this file, and
+ * check it into your repository.
+ *
+ * Developers on your team will then automatically enable them by calling on
+ * `composer development-enable`.
+ */
+
+declare(strict_types=1);
+
+use Mezzio\Container;
+use Mezzio\Middleware\ErrorResponseGenerator;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
+
+return [
+    'dependencies' => [
+        'invokables' => [
+        ],
+        'factories'  => [
+            ErrorResponseGenerator::class       => Container\WhoopsErrorResponseGeneratorFactory::class,
+            'Mezzio\Whoops'            => Container\WhoopsFactory::class,
+            'Mezzio\WhoopsPageHandler' => Container\WhoopsPageHandlerFactory::class,
+        ],
+    ],
+
+    'whoops' => [
+        'json_exceptions' => [
+            'display'    => true,
+            'show_trace' => true,
+            'ajax_only'  => true,
+        ],
+    ],
+];
+```
