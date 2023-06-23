@@ -38,8 +38,10 @@
   },
   "require": {
     "php": "^8.0",
+    "guzzle/guzzle": "dev-php-8.0 as v3.9.0",
     "laminas/laminas-component-installer": "^2.6",
     "laminas/laminas-config-aggregator": "^1.7",
+    "laminas/laminas-development-mode": "3.11.x-dev",
     "laminas/laminas-diactoros": "^2.8",
     "laminas/laminas-servicemanager": "^3.10",
     "laminas/laminas-stdlib": "^3.7.0",
@@ -50,11 +52,11 @@
     "rollun-com/rollun-callback": "^7.0.0",
     "rollun-com/rollun-datastore": "^8.0.0",
     "rollun-com/rollun-logger": "^7.0.1",
-    "symfony/dotenv": "^6.0.3",
-    "guzzle/guzzle": "dev-php-8.0 as v3.9.0"
-  }
-  ,
+    "rollun-com/rollun-openapi": "^10.1.0",
+    "symfony/dotenv": "^6.0.3"
+  },
   "require-dev": {
+    "filp/whoops": "^2.15",
     "roave/security-advisories": "dev-latest",
     "phpunit/phpunit": "^9.5.13"
   },

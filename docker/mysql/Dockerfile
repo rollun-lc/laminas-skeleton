@@ -1,0 +1,5 @@
+FROM mysql:8
+
+USER root
+
+ENV MYSQL_ALLOW_EMPTY_PASSWORD "true"

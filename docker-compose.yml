@@ -11,16 +11,39 @@ services:
       - 8080:80
     depends_on:
       - php-fpm
-
   php-fpm:
-    image: maxrollundev/php-fpm-dev-8.0
+    container_name: skeleton-php-fpm
+    build:
+      context: ./docker/php-fpm
+      dockerfile: Dockerfile
     volumes:
       - ./:/var/www/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       APP_ENV: dev
-      PHP_IDE_CONFIG: serverName=php-fpm
-
+      PHP_IDE_CONFIG: "serverName=php-fpm"
+      APP_DEBUG: "true"
+      DB_USER: root
+      DB_NAME: app_db
+      DB_PORT: 3306
+      DB_HOST: host.docker.internal
+  db:
+    build:
+      context: ./docker/mysql
+      dockerfile: Dockerfile
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: my_secret_password
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
   php-openapi-generator:
     image: maxrollundev/php-openapi-generator:8.0
     volumes:
       - ./:/var/www/app
+volumes:
+  mysql:

@@ -41,6 +41,9 @@ $aggregator = new ConfigAggregator([
     \Laminas\HttpHandlerRunner\ConfigProvider::class,
     \Mezzio\Helper\ConfigProvider::class,
     \Mezzio\Router\ConfigProvider::class,
+    \OpenAPI\ConfigProvider::class,
+    \Laminas\Serializer\ConfigProvider::class,
+    \Laminas\Cache\Storage\Adapter\BlackHole\ConfigProvider::class,
     // Include cache configuration
     new ArrayProvider($cacheConfig),
     // Rollun config
