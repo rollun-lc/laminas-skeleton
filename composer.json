@@ -1,8 +1,8 @@
 {
-  "name": "zendframework/zend-expressive-skeleton",
-  "description": "Zend expressive skeleton. Begin developing PSR-15 middleware applications in seconds!",
+  "name": "rollun-com/laminas-skeleton",
+  "description": "Rollun Laminas skeleton. Begin developing PSR-15 middleware applications in seconds!",
   "type": "project",
-  "homepage": "https://github.com/zendframework/zend-expressive-skeleton",
+  "homepage": "https://github.com/mezzio/mezzio-skeleton",
   "license": "BSD-3-Clause",
   "keywords": [
     "skeleton",
@@ -11,9 +11,8 @@
     "psr-7",
     "psr-11",
     "psr-15",
-    "zf",
-    "zendframework",
-    "zend-expressive"
+    "laminas",
+    "laminas-mvc-skeleton"
   ],
   "config": {
     "sort-packages": true,
@@ -30,11 +29,8 @@
     }
   },
   "support": {
-    "issues": "https://github.com/zendframework/zend-expressive-skeleton/issues",
-    "source": "https://github.com/zendframework/zend-expressive-skeleton",
-    "rss": "https://github.com/zendframework/zend-expressive-skeleton/releases.atom",
-    "slack": "https://zendframework-slack.herokuapp.com",
-    "forum": "https://discourse.zendframework.com/c/questions/expressive"
+    "issues": "https://github.com/mezzio/mezzio-skeleton/issues",
+    "source": "https://github.com/mezzio/mezzio-skeleton"
   },
   "require": {
     "php": "^8.0",
@@ -74,9 +70,9 @@
     "post-create-project-cmd": [
       "@development-enable"
     ],
-    "development-disable": "zf-development-mode disable",
-    "development-enable": "zf-development-mode enable",
-    "development-status": "zf-development-mode status",
+    "development-disable": "./vendor/bin/laminas-development-mode disable",
+    "development-enable": "./vendor/bin/laminas-development-mode enable",
+    "development-status": "./vendor/bin/laminas-development-mode status",
     "check": [
       "@cs-check",
       "@test"
